@@ -5,7 +5,6 @@ const db = require('../../db');
 
 // Allows all notes to have a Unique ID
 const { v4: uuidv4 } = require('uuid');
-const { notEqual } = require('assert');
 
 // GET Api notes 
 router.get('/notes', (req, res) => {
