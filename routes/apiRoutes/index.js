@@ -16,7 +16,7 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
     const newNote = req.body;
     newNote.id = Date.now().toString(); // Assign unique id
-    const notes = JSON.parse(fs.readFileSync(dbPath, 'utf8');
+    const notes = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     notes.push(newNote);
     // save the updated file 
     fs.writeFileSync(dbPath, JSON.stringify(db));
